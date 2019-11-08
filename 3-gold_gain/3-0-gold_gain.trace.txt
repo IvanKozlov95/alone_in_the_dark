@@ -1,0 +1,85 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+e1z3r5p1.42.us.org
+Darwin 17.7.0 x86_64
+$> date
+Tue Nov  5 10:39:24 PST 2019
+$> gcc --version
+Configured with: --prefix=/Library/Developer/CommandLineTools/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 10.0.0 (clang-1000.10.44.4)
+Target: x86_64-apple-darwin17.7.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+$> clang --version
+Apple LLVM version 10.0.0 (clang-1000.10.44.4)
+Target: x86_64-apple-darwin17.7.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: auto-exam/2019/c-exam-alone-in-the-dark-intermediate/exam_20191105/ikozlov
+
+= Git history ==================================================================
+$> git -C /var/folders/0y/6sk339q50jd4wvc9zg8b2k7c0000gp/T/tmppXL711/user log --pretty='%H - %an, %ad : %s'
+3d4c4b888469bc30684f07d18f5174a27326d7a9 - Exam 42, Tue Nov 5 10:38:23 2019 -0800 : 3
+38bf5e55d0a3dd76be39ab2c176695cf172e65fb - Exam 42, Tue Nov 5 09:44:04 2019 -0800 : 2
+482d27aaad55f6eb8454ed3e1f9a88fe6f630b4b - Exam 42, Tue Nov 5 09:24:39 2019 -0800 : 1
+effd5b5c4fa3e11f6f9e63c235b54641bef30080 - Exam 42, Tue Nov 5 09:08:50 2019 -0800 : 0
+ 
+= Collected files ==========================================
+$> ls -lAR /var/folders/0y/6sk339q50jd4wvc9zg8b2k7c0000gp/T/tmppXL711/user
+total 8
+-rw-r--r--  1 deepthought  deepthought  967 Nov  5 10:39 __GIT_HISTORY
+drwxr-xr-x  3 deepthought  deepthought  102 Nov  5 10:39 count_of_2
+drwxr-xr-x  3 deepthought  deepthought  102 Nov  5 10:39 flood_fill
+drwxr-xr-x  3 deepthought  deepthought  102 Nov  5 10:39 gold_gain
+drwxr-xr-x  3 deepthought  deepthought  102 Nov  5 10:39 longest_sequence
+
+/var/folders/0y/6sk339q50jd4wvc9zg8b2k7c0000gp/T/tmppXL711/user/count_of_2:
+total 8
+-rw-r--r--  1 deepthought  deepthought  334 Nov  5 10:39 count_of_2.c
+
+/var/folders/0y/6sk339q50jd4wvc9zg8b2k7c0000gp/T/tmppXL711/user/flood_fill:
+total 8
+-rw-r--r--  1 deepthought  deepthought  1378 Nov  5 10:39 flood_fill.c
+
+/var/folders/0y/6sk339q50jd4wvc9zg8b2k7c0000gp/T/tmppXL711/user/gold_gain:
+total 8
+-rw-r--r--  1 deepthought  deepthought  1734 Nov  5 10:39 gold_gain.c
+
+/var/folders/0y/6sk339q50jd4wvc9zg8b2k7c0000gp/T/tmppXL711/user/longest_sequence:
+total 8
+-rw-r--r--  1 deepthought  deepthought  1548 Nov  5 10:39 longest_sequence.c
+ 
+= gold_gain ====================================================================
+$> gcc -Wextra -Wall -Werror gold_gain.c main.c -o user_exe 
+
+= Test 1 ===================================================
+$> ./ot0vcgcuit57eozggmf9mfr5 test_00.txt
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./napi4ntbxuf3klx0lzasvurz test_01.txt
+$> diff -U 3 user_output_test2 test2.output | cat -e
+
+Diff OK :D
+= Test 3 ===================================================
+$> ./gijizc99ylwp5k0vo1zhrkyz test_02.txt
+$> diff -U 3 user_output_test3 test3.output | cat -e
+
+Diff OK :D
+= Test 4 ===================================================
+$> ./qe5oj69nnbunl33hfyqopxji test_03.txt
+$> diff -U 3 user_output_test4 test4.output | cat -e
+
+Diff OK :D
+= Test 5 ===================================================
+$> ./tav87cezdb94derhyay05ss8 test_04.txt
+$> diff -U 3 user_output_test5 test5.output | cat -e
+
+Diff OK :D
+Grade: 1
+
+= Final grade: 1 ===============================================================
